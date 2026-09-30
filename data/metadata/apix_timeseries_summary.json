@@ -1,0 +1,29 @@
+{
+  "project": "India Real-Time Airfare Price Index (APIx)",
+  "component": "multi-day time-series index engine",
+  "methodology": "Observed total-fare price relatives with DGCA two-way passenger-traffic route weights.",
+  "ml_used_in_index": false,
+  "base_collection_date": "2026-09-01",
+  "collection_start": "2026-09-01",
+  "collection_end": "2026-09-01",
+  "collection_days": 1,
+  "history_observations": 420,
+  "valid_relative_records": 60,
+  "base_index": 100.0,
+  "latest_index": 100.0,
+  "latest_cumulative_change_pct": 0.0,
+  "route_weights": {
+    "DEL-BOM": 0.28112727563298495,
+    "DEL-BLR": 0.19684495389032156,
+    "BOM-BLR": 0.15882459096960372,
+    "DEL-CCU": 0.13063502924741002,
+    "DEL-HYD": 0.12687092574941222,
+    "DEL-MAA": 0.10569722451026753
+  },
+  "notes": [
+    "ML predictions are not used to calculate APIx.",
+    "The first collection day is the base period.",
+    "Available DGCA route weights are renormalized on days with missing routes.",
+    "A meaningful time series requires multiple collection days."
+  ]
+}

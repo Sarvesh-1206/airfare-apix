@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+airfare_apix/.venv/
+airfare_apix_backup/.venv/
+
+# Testing / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+logs/
+*.log
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Old backups
+airfare_apix_backup/
+
+# Local Streamlit cache
+.streamlit/cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large/generated datasets — keep local for now
+data/raw/
+data/processed/
+data/training/
+
+# Keep only the APIx V1 metadata required by FastAPI
+data/metadata/*
+!data/metadata/apix_daily_index.csv
+!data/metadata/apix_daily_route_index.csv
+!data/metadata/apix_daily_strata.csv
+!data/metadata/apix_qc_report.json
+!data/metadata/apix_timeseries_summary.json
+
+# Duplicate/backup project copies
+airfare_apix/
+airfare_apix_backup/
+
+# Generated local artifacts not needed by V1 deployment
+artifacts/
+models/
+reports/

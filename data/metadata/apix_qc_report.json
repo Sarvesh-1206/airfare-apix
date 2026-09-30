@@ -1,0 +1,98 @@
+{
+  "project": "India Real-Time Airfare Price Index (APIx)",
+  "component": "statistical quality-control engine",
+  "overall_status": "REVIEW",
+  "checks_total": 11,
+  "pass_count": 9,
+  "review_count": 2,
+  "fail_count": 0,
+  "checks": [
+    {
+      "check": "required_field_missing_values",
+      "status": "PASS",
+      "value": 0,
+      "threshold": 0,
+      "message": "No missing values in required APIx fields."
+    },
+    {
+      "check": "duplicate_observations",
+      "status": "PASS",
+      "value": 0,
+      "threshold": 0,
+      "message": "No duplicate observation keys found."
+    },
+    {
+      "check": "positive_total_fares",
+      "status": "PASS",
+      "value": 0,
+      "threshold": 0,
+      "message": "All recorded total fares are positive."
+    },
+    {
+      "check": "route_coverage",
+      "status": "PASS",
+      "value": 6,
+      "threshold": 6,
+      "message": "All six APIx basket routes are represented."
+    },
+    {
+      "check": "lead_time_coverage",
+      "status": "PASS",
+      "value": 5,
+      "threshold": 5,
+      "message": "All five APIx lead-time buckets are represented."
+    },
+    {
+      "check": "fare_class_coverage",
+      "status": "PASS",
+      "value": 2,
+      "threshold": 2,
+      "message": "Economy and Business strata are represented."
+    },
+    {
+      "check": "time_series_depth",
+      "status": "REVIEW",
+      "value": 1,
+      "threshold": 7,
+      "message": "Only one collection day exists; daily movement cannot yet be validated."
+    },
+    {
+      "check": "fare_outlier_screen",
+      "status": "REVIEW",
+      "value": 7,
+      "threshold": 0,
+      "message": "7 fares flagged for review using a 3\u00d7IQR screen."
+    },
+    {
+      "check": "dgca_weight_integrity",
+      "status": "PASS",
+      "value": 0.9999999999999998,
+      "threshold": 1.0,
+      "message": "Six DGCA route weights are present and sum to 1."
+    },
+    {
+      "check": "route_index_output",
+      "status": "PASS",
+      "value": 6,
+      "threshold": 6,
+      "message": "All APIx routes appear in the route-index output."
+    },
+    {
+      "check": "index_integrity",
+      "status": "PASS",
+      "value": {
+        "rows": 1,
+        "invalid_values": 0,
+        "base_is_100": true
+      },
+      "threshold": "finite values; first value = 100",
+      "message": "APIx index values are finite and the base is 100."
+    }
+  ],
+  "principles": [
+    "QC flags observations; it does not silently delete genuine fares.",
+    "Extreme fares are reviewed because dynamic pricing can create legitimate spikes.",
+    "One collection day is a REVIEW condition, not a data-processing failure.",
+    "ML predictions are not used to validate or calculate the observed-fare APIx index."
+  ]
+}

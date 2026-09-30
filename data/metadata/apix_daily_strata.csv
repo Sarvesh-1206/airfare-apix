@@ -1,0 +1,11 @@
+collection_date,fare_class,advance_purchase_days,index,observations
+2026-09-01,Business,1,100.0,24
+2026-09-01,Business,7,100.0,24
+2026-09-01,Business,15,100.0,24
+2026-09-01,Business,30,100.0,24
+2026-09-01,Business,45,100.0,24
+2026-09-01,Economy,1,100.0,60
+2026-09-01,Economy,7,100.0,60
+2026-09-01,Economy,15,100.0,60
+2026-09-01,Economy,30,100.0,60
+2026-09-01,Economy,45,100.0,60
